@@ -1,78 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start; /* section과 aside가 위로 맞닿게 */
+}
+
+/*제목*/
 header {
   position: fixed;
-  z-index: 100;
   height: 75px;
   width: 100%;
   top: 0;
+  z-index: 100;
   border-bottom: 1px solid #d6d6d6;
-  background-color: white;
+  background-color: #fff;
 }
-header .head_container {
-  width: 1185px;
+#head-container {
+  width: 1170px;
   height: 100%;
-  margin: 0 auto;
-  display: flex; /* 요소들 가로 배치! */
+  margin: 0 auto; /*자동정렬*/
+  display: flex;
   align-items: center;
 }
 
-#logo1 {
+.logo1 {
   display: flex;
   align-items: center;
-  margin-left: 30px;
 }
-#logo1 > img {
+
+.logo1 > img {
   height: 40px;
   width: 40px;
 }
-#logo1 > p span {
+.logo1 > p span {
   display: block;
   text-align: left;
 }
-#logo1 > p {
-  margin: 0;
+.logo1 > p {
   padding-left: 8px;
 }
-#logo1 .everytime {
+.everytime {
   line-height: 18px;
   font-size: 12px;
   color: red;
   font-weight: bold;
 }
-#logo1 .school {
+.school {
   color: #292929;
   line-height: 28px;
   font-size: 20px;
 }
 
 #menu {
-  gap: 15px;
   display: flex;
   flex-direction: row;
+  gap: 15px;
   margin: 0 auto;
 }
-#menu > p {
+#menu p {
   font-weight: bold;
 }
 
-#logo2 {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 2px;
+.logo2 {
+  gap: 3px;
   margin-right: 30px;
 }
-#logo2 img {
+.logo2 img {
   width: 40px;
   height: 40px;
   padding: 8px;
   border: 1px solid #d2d2d2;
   border-radius: 12px;
-  box-sizing: border-box;
 }
 
-.container {
-  max-width: 1185px;
-  margin: 0 auto;
+#menu-container {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 13px 0;
 }
 
 #new_menu {
@@ -80,52 +90,319 @@ header .head_container {
   display: flex;
   flex-direction: row;
   margin-top: 80px; /*header랑 안 겹치게 하기 위해 내리기*/
-  border-bottom: 1px solid #d6d6d6;
-  background-color: #f2f2f2;
-  padding: 10px;
+  padding: 13px;
 }
 
 .line {
   width: 1px;
-  background-color: #ddd;
-  margin-right: 16px;
-}
-
-.line2 {
-  width: 1px;
-  background-color: #ddd;
-  margin-left: auto; /* 남는 공간만큼 밀기 */
-  margin-right: 16px;
+  height: 200px;
+  background-color: #e3e3e3;
+  margin-right: 15px;
 }
 
 .group {
-  width: 138px;
+  min-width: 130px;
   margin-right: 8px;
 }
 .group ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .group li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .group li a {
-  text-decoration: none;
-  color: black;
-  font-weight: normal;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #444444;
   font-size: 13px;
   padding-right: 10px;
 }
-
 .group li.now a,
-.group li.other a {
+.group li.other a,
+#menu .now {
   color: #f14141;
   font-weight: bold;
 }
 
-.group li.long_text a {
+section {
+  padding: 25px;
+  width: 780px;
+}
+
+.main-title {
+  border: 1px solid #d6d6d6;
+  height: 60px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.main-title > h1 > a {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+}
+
+.notification {
+  border: 1px solid #d6d6d6;
+  padding: 15px 0 15px 15px;
+  margin-bottom: 5px;
+  height: 130px;
+}
+.notification img {
+  height: 24px;
+  width: 24px;
+}
+
+.noti_question,
+.noti_hot {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+a span {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.noti_question .option {
+  max-width: 180px;
+  padding: 12px;
+  border: 1px solid #edfffe;
+  border-radius: 12px;
+  background-color: #edfffe;
+}
+
+.noti_hot .option {
+  padding: 12px;
+  border: 1px solid #fff3f3;
+  border-radius: 12px;
+  background-color: #fff3f3;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.option img {
+  height: 12px;
+  width: 12px;
+}
+.option > a {
+  height: 43px;
+  font-size: 12px;
+  color: #666;
+}
+
+/*---------------------------------*/
+#input-write {
+  border: 1.5px solid #d6d6d6;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 50px;
+  background-size: 40px 40px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+}
+#input-write a {
+  color: #888;
+  font-size: 14px;
+}
+#input-write img {
+  height: 30px;
+  width: 30px;
+}
+
+/*-----------------------------*/
+article {
+  border: 1px solid #e3e3e3;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e3e3e3;
+  height: 90px;
+  padding: 10px 20px;
+}
+
+.box .title {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+
+.box-in {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.box .content {
+  font-size: 13px;
+  color: #666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article,
+.box,
+.notification,
+.title {
+  width: 100%;
+}
+
+aside {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+}
+
+/*----------------------*/
+.board {
+  border: 1px solid #d6d6d6;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.board > h2 {
+  height: 40px;
+  font-size: 14px;
+  color: #005bac;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.board-title {
+  /* board-title은 board의 제목이면서 a를 가지는 것일 때 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.board-title a {
+  font-size: 14px;
+  color: #005bac;
+  font-weight: bold;
+}
+
+.board-title a.more {
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+}
+
+.board-in {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border-top: 1px solid #e3e3e3;
+  white-space: nowrap;
+}
+
+.board-in .title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #444444;
+}
+
+.board-in .content {
+  font-size: 11px;
+  color: #444;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board-in .content2 {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  height: 14px;
+}
+
+.board-in .content2 h4 {
+  color: #a6a6a6;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.info li {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.small-line {
+  height: 9px;
+  border-left: 1px solid #d6d6d6;
+  width: 4px;
+}
+
+.gray {
+  color: #999;
+}
+.info img {
+  height: 12px;
+  width: 12px;
+}
+.vote {
+  color: #f91f15;
+}
+.count {
+  color: #05bcbc;
+}
+
+/*---------------------------------------*/
+aside a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #444444;
+  font-size: 14px;
+  padding: 10px;
+}
+
+aside a .time {
+  font-size: 11px;
+  color: #a6a6a6;
+}
+
+.hot-board {
+  border-top: 1px solid #e3e3e3;
+}
+
+.star5 img {
+  width: 60px;
+  height: 12px;
 }

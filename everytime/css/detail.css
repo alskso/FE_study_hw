@@ -12,24 +12,32 @@
   display: flex;
   align-items: flex-start; /* section과 aside가 위로 맞닿게 */
 }
-
-/*제목*/
-header {
-  position: fixed;
-  height: 75px;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid #d6d6d6;
-  background-color: #fff;
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start; /* section과 aside가 위로 맞닿게 */
 }
+.hamburger img {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+.now_menu {
+  display: none;
+}
+/*제목*/
+
 #head-container {
-  width: 1200px;
-  height: 100%;
+  height: 75px;
+  max-width: 1170px;
   margin: 0 auto; /*자동정렬*/
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  white-space: nowrap;
+  gap: 15px;
+  background-color: #fff;
 }
 
 .logo1 {
@@ -67,7 +75,6 @@ header {
   flex-direction: row;
   gap: 15px;
   margin: 0 auto;
-  white-space: nowrap;
 }
 #menu p {
   font-weight: bold;
@@ -76,7 +83,6 @@ header {
 .logo2 {
   gap: 3px;
   margin-right: 60px;
-  white-space: nowrap;
 }
 .logo2 img {
   width: 40px;
@@ -88,17 +94,16 @@ header {
 
 #menu-container {
   background-color: #f2f2f2;
+  border-top: 1px solid #d6d6d6;
   border-bottom: 1px solid #d6d6d6;
-  padding: 13px 0;
+  padding-top: 23px;
+  padding-bottom: 18px;
 }
-
 #new_menu {
-  height: 230px;
+  height: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 80px; /*header랑 안 겹치게 하기 위해 내리기*/
-  padding: 13px;
 }
 
 .line {
@@ -483,4 +488,54 @@ aside a .time {
 .star5 img {
   width: 60px;
   height: 12px;
+}
+
+@media screen and (max-width: 640px) {
+  aside {
+    display: none;
+  }
+  .side-box {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hamburger img {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .logo1,
+  #menu,
+  .logo2 {
+    display: none;
+  }
+
+  #head-container {
+    height: 50px;
+  }
+  #menu-container {
+    padding-top: 23px;
+    padding-bottom: 0;
+  }
+
+  .now_menu {
+    display: block;
+  }
+
+  .main-title {
+    display: none;
+  }
+
+  section {
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  .group li a {
+    font-size: 12px;
+  }
 }

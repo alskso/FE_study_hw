@@ -16,7 +16,7 @@
   max-width: 1170px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start; /* section과 aside가 위로 맞닿게 */
+  align-items: flex-start;
 }
 .hamburger img {
   display: none;

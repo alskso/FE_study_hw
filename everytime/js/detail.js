@@ -139,7 +139,7 @@
 
 //   replay_input.value = "";
 // });
-// -----------------------------------------------------
+
 // 공감 버튼
 const voteButton = document.getElementById("vote_button");
 const voteCount = document.querySelector(".vote_count");

@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  font-family: "Apple SD Gothic Neo", "맑은 고딕", "돋움", sans-serif;
 }
 .container {
   max-width: 1170px;
@@ -230,6 +231,11 @@ a span {
 #input-write img {
   height: 30px;
   width: 30px;
+}
+
+#form_container {
+  border: 1px solid #d6d6d6;
+  border-bottom: none;
 }
 
 /*-----------------------------*/

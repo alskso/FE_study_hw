@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/everytime/css/detail.css" />
+    <script src="/everytime/js/detail.js" defer></script>
     <link rel="icon" href="/everytime/img/nav.logo.png" type="image/png">
     <title>에브리타임</title>
   </head>
@@ -230,30 +231,33 @@
               <img src="/everytime/img/section_img_2.png">
             </div>
             <ul class="info">
-              <li><img src="/everytime/img/container.articles.vote.png" alt="vote"><span class="vote">10</span></li>
-              <li><img src="/everytime/img/container.articles.comment.png" alt="comment"><span class="count">7</span></li>
-              <li><img src="/everytime/img/container.articles.scrap.png" alt="star"><span class="star">1</span></li>
+              <li><img src="/everytime/img/container.articles.vote.png" alt="vote"><span class="vote_count">0</span></li>
+              <li><img src="/everytime/img/container.articles.comment.png" alt="comment"><span class="comment_count">0</span></li>
+              <li><img src="/everytime/img/container.articles.scrap.png" alt="star"><span class="star_count">0</span></li>
             </ul>
             <div class="buttons">
-              <button type="submit">
-                <img src="/everytime/img/container.articles.buttons.posvote.png" alt="vote" class="vote"><span>공감</span>
+              <button type="submit" id="vote_button">
+                <img src="/everytime/img/container.articles.buttons.posvote.png" alt="vote" class="vote"><span class="vote_text">공감</span>
               </button>
-              <button type="submit">
-                <img src="/everytime/img/container.articles.buttons.scrap.png" alt="star" class="star"><span>스크랩</span>
+              <button type="submit" id="star_button">
+                <img src="/everytime/img/container.articles.buttons.scrap.png" alt="star" class="star"><span class="star_text">스크랩</span>
               </button>
             </div>
           </div>
+          <!-- 댓글 입력 결과창 -->
+
+<!-- 댓글 입력 창 -->
+          <div id="comment_area"></div>
 
           <div class="box2">
             <form class="write">
-              <input type="text" placeholder=" 댓글을 입력하세요" class="input">
-
+              <input type="text" placeholder=" 댓글을 입력하세요" class="comment_input">
               <ul class="right">
                 <li class="no_name">
                   <input type="checkbox" id="anonymous" />
                   <label for="anonymous">익명</label>
                 </li>
-                <button type="submit"><img src="/everytime/img/container.articles.write.submit.png" alt="입력"></button>
+                <button type="button" id="submit_comment"><img src="/everytime/img/container.articles.write.submit.png" alt="입력"></button>
               </ul>
             </form>
           </div>           

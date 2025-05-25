@@ -103,7 +103,7 @@
   height: 200px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .line {
@@ -245,7 +245,8 @@ article {
   width: 250px;
 }
 
-.star {
+.star,
+.star_count {
   color: #ffc900;
 }
 .box > .info {
@@ -263,7 +264,8 @@ article {
   gap: 10px;
 }
 
-.buttons button {
+#vote_button,
+#star_button {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -277,11 +279,13 @@ article {
   font-weight: bold;
 }
 
-.buttons button img {
+#vote_button img,
+#star_button img {
   width: 13px;
   height: 13px;
 }
 
+/* ------------------------------------- */
 .box2 {
   border-top: 1px solid #e3e3e3;
   margin: 0 -15px; /* article padding만큼 좌우 늘리기 */
@@ -291,18 +295,90 @@ article {
   padding-right: 0;
 }
 
-.write {
+/* 댓글 결과창 */
+.comment_box {
+  border-top: 1px solid #e3e3e3;
+  margin: 0 -15px;
+  padding: 10px 15px 10px 15px;
+  display: none;
+}
+.comment_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+.comment_profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment_profile img {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin: 0 5px 5px 0;
+}
+
+.comment_name {
+  font-weight: bold;
+  font-size: 14px;
+}
+.comment_etc {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 12px;
+  gap: 10px;
+  height: 50px;
+}
+
+.comment_etc a {
+  color: #a6a6a6;
+}
+.comment_content {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.time {
+  font-size: 12px;
+}
+/* ------------------ */
+/* 대댓글 부분 */
+
+/* 대댓글 입력창 */
+.replay_box2 {
+  border: 1px solid #e3e3e3;
+  margin: 5px 4px 4px 35px;
+  padding: 10px 0 10px 5px;
+  background-color: #f9f9f9;
+  height: 40px;
+  display: none;
+}
+
+.replay_comment_box {
+  border: 1px solid #e3e3e3;
+  margin: 5px 4px 4px 35px;
+  padding: 5px 10px 5px 10px;
+  display: none;
+  background-color: #f9f9f9;
+}
+/* -------------------------- */
+.write,
+.replay_write {
   display: flex;
   align-items: center;
   gap: 10px;
   height: 100%;
   justify-content: space-between;
 }
-
-.write .input {
+.comment_input,
+.replay_comment_input {
   border: none;
-  background: transparent;
   outline: none;
+  background: transparent;
 }
 
 .right {
@@ -311,7 +387,8 @@ article {
   align-items: center;
   gap: 8px;
 }
-.box2 img {
+.box2 img,
+.replay_box2 img {
   height: 40px;
   width: 40px;
   background-color: #f91f15;
@@ -443,7 +520,7 @@ aside {
 .info li {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 
 .small-line {
@@ -459,10 +536,11 @@ aside {
   height: 12px;
   width: 12px;
 }
-.vote {
+.vote,
+.vote_count {
   color: #f91f15;
 }
-.count {
+.comment_count {
   color: #05bcbc;
 }
 

@@ -157,9 +157,9 @@
               </ul>
             </div>
           
-            <h2>🔥D-DAY🔥 🦁 멋쟁이사자처럼 13기 아기사자 모집 안내 🦁</h2>
+            <div class="article_title"><h2>🔥D-DAY🔥 🦁 멋쟁이사자처럼 13기 아기사자 모집 안내 🦁</h2></div>
             <br>
-            <p class="contents">
+            <p class="article_content">
               안녕하세요, 덕성여자대학교 멋쟁이사자처럼입니다.
               <br>
               <br>
@@ -230,6 +230,7 @@
               <img src="/everytime/img/section_img_1.png"/>
               <img src="/everytime/img/section_img_2.png">
             </div>
+
             <ul class="info">
               <li><img src="/everytime/img/container.articles.vote.png" alt="vote"><span class="vote_count">0</span></li>
               <li><img src="/everytime/img/container.articles.comment.png" alt="comment"><span class="comment_count">0</span></li>
@@ -246,7 +247,62 @@
           </div>       
 
 <!-- 댓글 입력 창 -->
-          <div id="comment_area"></div>
+        <div id="comment_area"></div>
+          <!-- 댓글 템플릿 -->
+          <template id="comment_template">
+            <div class="comment_box">
+              <div class="comment_title">
+                <div class="comment_profile">
+                  <img src="/everytime/img/anonymous.profile.png" alt="profile">
+                  <p class="comment_name">익명</p>
+                </div>
+                <ul class="comment_etc">
+                  <li><a href="#" class="new_comment">대댓글</a></li>
+                  <li><a href="#">공감</a></li>
+                  <li><a href="#">쪽지</a></li>
+                  <li><a href="#">신고</a></li>
+                </ul>
+              </div>
+              <p class="comment_content"></p>
+              <div class="time">방금 전</div>
+            </div>
+          </template>
+
+          <!-- 대댓글 입력창 템플릿 -->
+          <template id="reply_input_template">
+            <form class="recomment_area">
+              <input type="text" placeholder=" 대댓글을 입력하세요" class="recomment_input">
+              <ul class="right">
+                <li class="no_name">
+                  <input type="checkbox" id="recomment_anonymous">
+                  <label for="recomment_anonymous">익명</label>
+                </li>
+                <button type="button" class="recomment_submit">
+                  <img src="/everytime/img/container.articles.write.submit.png" alt="입력">
+                </button>
+              </ul>
+            </form>
+          </template>
+
+          <!-- 대댓글 출력 템플릿 -->
+          <template id="rerecomment_template">
+            <div class="rerecomment_box">
+              <div class="rerecomment_title">
+                <div class="rerecomment_profile">
+                  <img src="/everytime/img/anonymous.profile.png" alt="profile">
+                  <p class="rerecomment_name">익명</p>
+                </div>
+                <ul class="comment_etc">
+                  <li><a href="#">공감</a></li>
+                  <li><a href="#">쪽지</a></li>
+                  <li><a href="#">신고</a></li>
+                </ul>
+              </div>
+              <p class="rerecomment_content"></p>
+              <div class="time">방금 전</div>
+            </div>
+          </template>
+
 
           <div class="box2">
             <form class="write">

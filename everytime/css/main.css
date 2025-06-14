@@ -38,15 +38,15 @@
   white-space: nowrap;
 }
 
-.logo1 > img {
+.logo1  img {
   height: 40px;
   width: 40px;
 }
-.logo1 > p span {
+.logo1  p span {
   display: block;
   text-align: left;
 }
-.logo1 > p {
+.logo1  p {
   padding-left: 8px;
 }
 .everytime {

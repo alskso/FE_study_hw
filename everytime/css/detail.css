@@ -222,11 +222,11 @@ article {
   color: #a6a6a6;
 }
 
-.contents a {
+.article_content a {
   color: #666;
   font-size: 18px;
 }
-.contents {
+.article_content {
   padding-bottom: 15px;
   color: #444444;
   font-size: 16px;
@@ -300,7 +300,6 @@ article {
   border-top: 1px solid #e3e3e3;
   margin: 0 -15px;
   padding: 10px 15px 10px 15px;
-  display: none;
 }
 .comment_title {
   display: flex;
@@ -309,13 +308,13 @@ article {
   height: 30px;
 }
 
-.comment_profile {
+.comment_profile, .rerecomment_profile {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.comment_profile img {
+.comment_profile img, .rerecomment_profile img {
   width: 20px;
   height: 20px;
   border-radius: 3px;
@@ -344,30 +343,44 @@ article {
 }
 .time {
   font-size: 12px;
+  margin-bottom: 5px;
+  
 }
 /* ------------------ */
 /* 대댓글 부분 */
 
 /* 대댓글 입력창 */
-.replay_box2 {
+.recomment_area {
   border: 1px solid #e3e3e3;
   margin: 5px 4px 4px 35px;
-  padding: 10px 0 10px 5px;
-  background-color: #f9f9f9;
-  height: 40px;
+  padding: 5px 0px 5px 10px;
   display: none;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  justify-content: space-between;
 }
 
-.replay_comment_box {
-  border: 1px solid #e3e3e3;
-  margin: 5px 4px 4px 35px;
-  padding: 5px 10px 5px 10px;
-  display: none;
-  background-color: #f9f9f9;
+
+/* 대댓글 출력층 */
+.rerecomment_name {
+  font-weight: bold;
+  font-size: 14px;
+}
+.rerecomment_box{
+    margin: 5px 4px 4px 35px;
+    padding: 8px 8px 0 8px ;
+    border: 1px solid #e3e3e3;
+    background-color: #f9f9f9;
+    height: 90px;
+}
+.rerecomment_content{
+  margin-bottom: 5px;
 }
 /* -------------------------- */
-.write,
-.replay_write {
+.write {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -375,10 +388,16 @@ article {
   justify-content: space-between;
 }
 .comment_input,
-.replay_comment_input {
+.recomment_input {
   border: none;
   outline: none;
   background: transparent;
+}
+.rerecomment_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
 }
 
 .right {
@@ -388,7 +407,7 @@ article {
   gap: 8px;
 }
 .box2 img,
-.replay_box2 img {
+.recomment_submit img {
   height: 40px;
   width: 40px;
   background-color: #f91f15;

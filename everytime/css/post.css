@@ -7,13 +7,17 @@
   font-family: "Apple SD Gothic Neo", "맑은 고딕", "돋움", sans-serif;
 }
 
-.board {
+.post_board {
   border: 2px solid #d6d6d6;
   width: 780px;
 }
-.input p {
+.post_input p {
   padding: 15px;
   border-bottom: 1px solid #d6d6d6;
+}
+.post_input{
+  display: none;
+  border: 1px solid #d6d6d6;
 }
 input {
   border: none;
@@ -34,7 +38,7 @@ textarea {
   outline: none;
 }
 
-.option {
+.post_option {
   width: 100%;
   height: 40px;
   display: flex;
@@ -43,27 +47,58 @@ textarea {
   align-items: center;
   margin: 0;
 }
-.option img {
+.post_option img {
   height: 35px;
   width: 35px;
 }
 
-.left {
+.post_left {
   padding-left: 5px;
 }
 
-.right {
+.post_right {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.right img {
+/* 질문 체크 박스를 누렀을 때 나오는 guidetext */
+#question_info {
+  height: 80px;
+  padding: 15px;
+  border-bottom: 1px solid #d6d6d6;
+  display: none; /* 처음에는 보이지 않도록 설정 */
+  align-items: center;
+  justify-content: center;
+}
+
+#question_info p {
+  border-radius: 8px;
+  border: none;
+  line-height: 18px;
+  color: #05bcbc;
+  font-size: 12px;
+  height: 55px;
+  background-color: #edfffe;
+  display: flex;
+  align-items: center;
+}
+
+.question_box_style {
+  accent-color: #05bcbc;
+}
+
+.question_text_style {
+  color: #05bcbc;
+  font-weight: bold;
+}
+
+.post_right img {
   height: 40px;
   width: 40px;
   background-color: #f91f15;
 }
-.right button {
+.post_right button {
   border: none;
   margin: 0;
 }
